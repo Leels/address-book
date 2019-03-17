@@ -9,27 +9,65 @@
   </head>
   <body>
     <div class="container">
-      <h1>Add your contact to my address book!</h1>
+      <h1>Address Book</h1>
 
-      <form id="address-book">
+      <div class="row">
+      <div class="col-md-6">
+      <form id="new-contact">
         <div class="form-group">
-          <label for="firstName">Enter your first name:</label>
-          <input id="firstName" type="text">
-
-          <label for="lastName">Enter your last name:</label>
-          <input type="text" id="lastName">
-
-          <label for="phoneNumber">Enter your phone number:</label>
-          <input type="text" id="phoneNumber">
+          <label for="new-first-name">First name:</label>
+          <input id="new-first-name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="new-last-name">Last name:</label>
+          <input type="text" id="new-last-name" class= "form-control">
+        </div>
+        <div class="form-group">
+          <label for="new-phone-number">Phone number:</label>
+          <input type="text" id="new-phone-number" class="form-control">
         </div>
 
-        <button type="submit" class="btn">add me!</button>
+        <div id= "new-addresses">
+          <div class="new-address">
+            <div class="form-group">
+              <label for="new-street">Street:</label>
+              <input type="text" class="form-control new-street">
+            </div>
+            <div class="form-group">
+              <label for="new-city">City:</label>
+              <input type="text" class="form-control new-city">
+            </div>
+            <div class="form-group">
+              <label for="new-state">City:</label>
+              <input type="text" class="form-control new-state">
+            </div>
+          </div>
+        </div>
+
+        <span class="btn btn-primary" id="add-address">Another address</span>
+
+        <button type="submit" class="btn btn-default">Add me!</button>
       </form>
 
-      <div id="result">
-        
+      <h2>Contacts:</h2>
+      <ul id="contacts">
+
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div id="show-contact">
+        <h2></h2>
+        <p>First name:</p>
+        <p>Last name:</p>
+        <p>Addresses:</p>
+        <ul id="addresses">
+
+        </ul>
+
       </div>
 
+    </div>
+    </div>
     </div>
   </body>
 </html>
