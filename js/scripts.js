@@ -15,6 +15,11 @@ function Contact(firstName, lastName, phoneNumber) {
   this.addresses = [];
 }
 
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+}
+
+// Business Logic for Address ---------
 function Address(street, city, state) {
   this.street = street;
   this.city = city;
@@ -25,12 +30,9 @@ Address.prototype.fullAddress = function() {
   return this.street + ", " + this.city + " " + this.state;
 }
 
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
-}
-
 var newAddressBook = new AddressBook();
 
+// front-end logic
 $(document).ready(function() {
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
@@ -56,7 +58,7 @@ $(document).ready(function() {
     var inputtedPhoneNumber = $("input#new-phone-number").val();
     var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
 
-$("".new-address").each(function() {
+$(".new-address").each(function() {
   var inputtedStreet = $(this).find("input.new-street").val();
   var inputtedCity = $(this).find("input.new-city").val();
   var inputtedState = $(this).find("input.new-state").val();
