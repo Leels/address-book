@@ -8,7 +8,7 @@ AddressBook.prototype.addContact = function(contact) {
 }
 
 //Business Logic for Contacts
-function Contact(firstName, lastName, phoneNumber) {
+function contact(firstName, lastName, phoneNumber) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.phoneNumber = phoneNumber;
@@ -75,6 +75,7 @@ $(".contact").last().click(function() {
   $(".last-name").text(newContact.lastName);
   $(".phone-number").text(newContact.phoneNumber);
   $("ul#addresses").text("");
+
   newContact.addresses.forEach(function(address) {
     $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
   });
